@@ -1,0 +1,962 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/lovell/sharp"
+
+    >sharp (v0.17.3)</a>
+</h1>
+<h4>High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP and TIFF images</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sharp">module sharp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.cache">
+            function <span class="apidocSignatureSpan">sharp.</span>cache
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.concurrency">
+            function <span class="apidocSignatureSpan">sharp.</span>concurrency
+            <span class="apidocSignatureSpan">(concurrency)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.counters">
+            function <span class="apidocSignatureSpan">sharp.</span>counters
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.simd">
+            function <span class="apidocSignatureSpan">sharp.</span>simd
+            <span class="apidocSignatureSpan">(simd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.super_">
+            function <span class="apidocSignatureSpan">sharp.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>binding</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>bool</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>colorspace</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>colourspace</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>format</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>gravity</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>interpolator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>is</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>kernel</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>maximum</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>queue</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>strategy</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sharp.</span>versions</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sharp.binding">module sharp.binding</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.binding.download_vips">
+            function <span class="apidocSignatureSpan">sharp.binding.</span>download_vips
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.binding.use_global_vips">
+            function <span class="apidocSignatureSpan">sharp.binding.</span>use_global_vips
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sharp.is">module sharp.is</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.bool">
+            function <span class="apidocSignatureSpan">sharp.is.</span>bool
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.buffer">
+            function <span class="apidocSignatureSpan">sharp.is.</span>buffer
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.defined">
+            function <span class="apidocSignatureSpan">sharp.is.</span>defined
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.fn">
+            function <span class="apidocSignatureSpan">sharp.is.</span>fn
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.inArray">
+            function <span class="apidocSignatureSpan">sharp.is.</span>inArray
+            <span class="apidocSignatureSpan">(val, list)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.inRange">
+            function <span class="apidocSignatureSpan">sharp.is.</span>inRange
+            <span class="apidocSignatureSpan">(val, min, max)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.integer">
+            function <span class="apidocSignatureSpan">sharp.is.</span>integer
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.invalidParameterError">
+            function <span class="apidocSignatureSpan">sharp.is.</span>invalidParameterError
+            <span class="apidocSignatureSpan">(name, expected, actual)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.number">
+            function <span class="apidocSignatureSpan">sharp.is.</span>number
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.object">
+            function <span class="apidocSignatureSpan">sharp.is.</span>object
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.is.string">
+            function <span class="apidocSignatureSpan">sharp.is.</span>string
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sharp" id="apidoc.module.sharp">module sharp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.cache" id="apidoc.element.sharp.cache">
+        function <span class="apidocSignatureSpan">sharp.</span>cache
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cache(options) {
+  if (is.bool(options)) {
+    if (options) {
+      // Default cache settings of 50MB, 20 files, 100 items
+      return sharp.cache(50, 20, 100);
+    } else {
+      return sharp.cache(0, 0, 0);
+    }
+  } else if (is.object(options)) {
+    return sharp.cache(options.memory, options.files, options.items);
+  } else {
+    return sharp.cache();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Gets, or when options are provided sets, the limits of _libvips&#x27;_ operation cache.
+* Existing entries in the cache will be trimmed after any change in limits.
+* This method always returns cache statistics,
+* useful for determining how much working memory is required for a particular task.
+*
+* @example
+* const stats = sharp.<span class="apidocCodeKeywordSpan">cache</span>();
+* @example
+* sharp.cache( { items: 200 } );
+* sharp.cache( { files: 0 } );
+* sharp.cache(false);
+*
+* @param {Object|Boolean} options - Object with the following attributes, or Boolean where true uses default cache settings and
+false removes all caching.
+* @param {Number} [options.memory=50] - is the maximum memory in MB to use for this cache
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.concurrency" id="apidoc.element.sharp.concurrency">
+        function <span class="apidocSignatureSpan">sharp.</span>concurrency
+        <span class="apidocSignatureSpan">(concurrency)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function concurrency(concurrency) {
+  return sharp.concurrency(is.integer(concurrency) ? concurrency : null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * The maximum number of images that can be processed in parallel
+ * is limited by libuv&#x27;s `UV_THREADPOOL_SIZE` environment variable.
+ *
+ * This method always returns the current concurrency.
+ *
+ * @example
+ * const threads = sharp.<span class="apidocCodeKeywordSpan">concurrency</span>(); // 4
+ * sharp.concurrency(2); // 2
+ * sharp.concurrency(0); // 4
+ *
+ * @param {Number} [concurrency]
+ * @returns {Number} concurrency
+ */
+function concurrency (concurrency) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.counters" id="apidoc.element.sharp.counters">
+        function <span class="apidocSignatureSpan">sharp.</span>counters
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function counters() {
+  return sharp.counters();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * Provides access to internal task counters.
+ * - queue is the number of tasks this module has queued waiting for _libuv_ to provide a worker thread from its pool.
+ * - process is the number of resize tasks currently being processed.
+ *
+ * @example
+ * const counters = sharp.<span class="apidocCodeKeywordSpan">counters</span>(); // { queue: 2, process: 4 }
+ *
+ * @returns {Object}
+ */
+function counters () {
+  return sharp.counters();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.simd" id="apidoc.element.sharp.simd">
+        function <span class="apidocSignatureSpan">sharp.</span>simd
+        <span class="apidocSignatureSpan">(simd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function simd(simd) {
+  return sharp.simd(is.bool(simd) ? simd : null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Improves the performance of `resize`, `blur` and `sharpen` operations
+* by taking advantage of the SIMD vector unit of the CPU, e.g. Intel SSE and ARM NEON.
+*
+* This feature is currently off by default but future versions may reverse this.
+* Versions of liborc prior to 0.4.25 are known to segfault under heavy load.
+*
+* @example
+* const simd = sharp.<span class="apidocCodeKeywordSpan">simd</span>();
+* // simd is `true` if SIMD is currently enabled
+* @example
+* const simd = sharp.simd(true);
+* // attempts to enable the use of SIMD, returning true if available
+*
+* @param {Boolean} [simd=false]
+* @returns {Boolean}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.super_" id="apidoc.element.sharp.super_">
+        function <span class="apidocSignatureSpan">sharp.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Duplex(options) {
+  if (!(this instanceof Duplex))
+    return new Duplex(options);
+
+  Readable.call(this, options);
+  Writable.call(this, options);
+
+  if (options &#x26;&#x26; options.readable === false)
+    this.readable = false;
+
+  if (options &#x26;&#x26; options.writable === false)
+    this.writable = false;
+
+  this.allowHalfOpen = true;
+  if (options &#x26;&#x26; options.allowHalfOpen === false)
+    this.allowHalfOpen = false;
+
+  this.once(&#x27;end&#x27;, onend);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sharp.binding" id="apidoc.module.sharp.binding">module sharp.binding</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.binding.download_vips" id="apidoc.element.sharp.binding.download_vips">
+        function <span class="apidocSignatureSpan">sharp.binding.</span>download_vips
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">download_vips = function () {
+  // Has vips been installed locally?
+  const vipsHeaderPath = path.join(__dirname, &#x27;vendor&#x27;, &#x27;include&#x27;, &#x27;vips&#x27;, &#x27;vips.h&#x27;);
+  if (!isFile(vipsHeaderPath)) {
+    // Ensure Intel 64-bit or ARM
+    if (arch === &#x27;ia32&#x27;) {
+      error(&#x27;Intel Architecture 32-bit systems require manual installation - please see http://sharp.dimens.io/en/stable/install
+/&#x27;);
+    }
+    // Ensure glibc &#x3e;= 2.15
+    const lddVersion = process.env.LDD_VERSION;
+    if (lddVersion) {
+      if (/(glibc|gnu libc)/i.test(lddVersion)) {
+        const glibcVersion = lddVersion ? lddVersion.split(/\n/)[0].split(&#x27; &#x27;).slice(-1)[0].trim() : &#x27;&#x27;;
+        if (glibcVersion &#x26;&#x26; semver.lt(glibcVersion + &#x27;.0&#x27;, &#x27;2.13.0&#x27;)) {
+          error(&#x27;glibc version &#x27; + glibcVersion + &#x27; requires manual installation - please see http://sharp.dimens.io/en/stable/install
+/&#x27;);
+        }
+      } else {
+        error(lddVersion.split(/\n/)[0] + &#x27; requires manual installation - please see http://sharp.dimens.io/en/stable/install/&#x27;);
+      }
+    }
+    // Arch/platform-specific .tar.gz
+    const tarFilename = [&#x27;libvips&#x27;, minimumLibvipsVersion, platformId()].join(&#x27;-&#x27;) + &#x27;.tar.gz&#x27;;
+    const tarPathLocal = path.join(__dirname, &#x27;packaging&#x27;, tarFilename);
+    if (isFile(tarPathLocal)) {
+      unpack(tarPathLocal);
+    } else {
+      // Download to per-process temporary file
+      const tarPathTemp = path.join(os.tmpdir(), process.pid + &#x27;-&#x27; + tarFilename);
+      const tmpFile = fs.createWriteStream(tarPathTemp).on(&#x27;finish&#x27;, function () {
+        unpack(tarPathTemp, function () {
+          // Attempt to remove temporary file
+          try {
+            fs.unlinkSync(tarPathTemp);
+          } catch (err) {}
+        });
+      });
+      const gotOpt = {
+        agent: caw(null, {
+          protocol: &#x27;https&#x27;
+        })
+      };
+      const url = distBaseUrl + tarFilename;
+      got.stream(url, gotOpt).on(&#x27;response&#x27;, function (response) {
+        if (response.statusCode !== 200) {
+          error(url + &#x27; status code &#x27; + response.statusCode);
+        }
+      }).on(&#x27;error&#x27;, function (err) {
+        error(&#x27;Download of &#x27; + url + &#x27; failed: &#x27; + err.message);
+      }).pipe(tmpFile);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.binding.use_global_vips" id="apidoc.element.sharp.binding.use_global_vips">
+        function <span class="apidocSignatureSpan">sharp.binding.</span>use_global_vips
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use_global_vips = function () {
+  const globalVipsVersion = process.env.GLOBAL_VIPS_VERSION;
+  if (globalVipsVersion) {
+    const useGlobalVips = semver.gte(
+      globalVipsVersion,
+      minimumLibvipsVersion
+    );
+    process.stdout.write(useGlobalVips ? &#x27;true&#x27; : &#x27;false&#x27;);
+  } else {
+    process.stdout.write(&#x27;false&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sharp.is" id="apidoc.module.sharp.is">module sharp.is</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.bool" id="apidoc.element.sharp.is.bool">
+        function <span class="apidocSignatureSpan">sharp.is.</span>bool
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bool = function (val) {
+  return typeof val === &#x27;boolean&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* This may be overridden by other sharp operations such as `toColourspace(&#x27;b-w&#x27;)`,
+* which will produce an output image containing one color channel.
+* An alpha channel may be present, and will be unchanged by the operation.
+* @param {Boolean} [greyscale=true]
+* @returns {Sharp}
+*/
+function greyscale (greyscale) {
+ this.options.greyscale = is.<span class="apidocCodeKeywordSpan">bool</span>(greyscale) ? greyscale : true;
+ return this;
+}
+
+/**
+* Alternative spelling of `greyscale`.
+* @param {Boolean} [grayscale=true]
+* @returns {Sharp}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.buffer" id="apidoc.element.sharp.is.buffer">
+        function <span class="apidocSignatureSpan">sharp.is.</span>buffer
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buffer = function (val) {
+  return object(val) &#x26;&#x26; val instanceof Buffer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @private
+ */
+function _createInputDescriptor (input, inputOptions, containerOptions) {
+const inputDescriptor = {};
+if (is.string(input)) {
+  // filesystem
+  inputDescriptor.file = input;
+} else if (is.<span class="apidocCodeKeywordSpan">buffer</span>(input)) {
+  // Buffer
+  inputDescriptor.buffer = input;
+} else if (!is.defined(input) &#x26;&#x26; is.object(containerOptions) &#x26;&#x26; containerOptions.allowStream) {
+  // Stream
+  inputDescriptor.buffer = [];
+} else {
+  throw new Error(&#x27;Unsupported input &#x27; + typeof input);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.defined" id="apidoc.element.sharp.is.defined">
+        function <span class="apidocSignatureSpan">sharp.is.</span>defined
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defined = function (val) {
+  return typeof val !== &#x27;undefined&#x27; &#x26;&#x26; val !== null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @throws {Error} Invalid parameters
+ */
+function overlayWith (overlay, options) {
+this.options.overlay = this._createInputDescriptor(overlay, options, {
+  allowStream: false
+});
+if (is.object(options)) {
+  if (is.<span class="apidocCodeKeywordSpan">defined</span>(options.tile)) {
+    if (is.bool(options.tile)) {
+      this.options.overlayTile = options.tile;
+    } else {
+      throw new Error(&#x27;Invalid overlay tile &#x27; + options.tile);
+    }
+  }
+  if (is.defined(options.cutout)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.fn" id="apidoc.element.sharp.is.fn">
+        function <span class="apidocSignatureSpan">sharp.is.</span>fn
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fn = function (val) {
+  return typeof val === &#x27;function&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *   });
+ *
+ * @param {Function} [callback] - called with the arguments `(err, metadata)`
+ * @returns {Promise&#x3c;Object&#x3e;|Sharp}
+ */
+function metadata (callback) {
+const that = this;
+if (is.<span class="apidocCodeKeywordSpan">fn</span>(callback)) {
+  if (this._isStreamInput()) {
+    this.on(&#x27;finish&#x27;, function () {
+      that._flattenBufferIn();
+      sharp.metadata(that.options, callback);
+    });
+  } else {
+    sharp.metadata(this.options, callback);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.inArray" id="apidoc.element.sharp.is.inArray">
+        function <span class="apidocSignatureSpan">sharp.is.</span>inArray
+        <span class="apidocSignatureSpan">(val, list)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inArray = function (val, list) {
+  return list.indexOf(val) !== -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *   });
+ *
+ * @param {String} boolOp - one of `and`, `or` or `eor` to perform that bitwise operation, like the C logic operators `&#x26;`, `|`
+and `^` respectively.
+ * @returns {Sharp}
+ * @throws {Error} Invalid parameters
+ */
+function bandbool (boolOp) {
+  if (is.string(boolOp) &#x26;&#x26; is.<span class="apidocCodeKeywordSpan">inArray</span>(boolOp, [&#x27;and&#x27;, &#x27;or&#x27
+;, &#x27;eor&#x27;])) {
+    this.options.bandBoolOp = boolOp;
+  } else {
+    throw new Error(&#x27;Invalid bandbool operation &#x27; + boolOp);
+  }
+  return this;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.inRange" id="apidoc.element.sharp.is.inRange">
+        function <span class="apidocSignatureSpan">sharp.is.</span>inRange
+        <span class="apidocSignatureSpan">(val, min, max)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inRange = function (val, min, max) {
+  return val &#x3e;= min &#x26;&#x26; val &#x3c;= max;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (channel === &#x27;red&#x27;) {
+    channel = 0;
+  } else if (channel === &#x27;green&#x27;) {
+    channel = 1;
+  } else if (channel === &#x27;blue&#x27;) {
+    channel = 2;
+  }
+  if (is.integer(channel) &#x26;&#x26; is.<span class="apidocCodeKeywordSpan">inRange</span>(channel, 0, 4)) {
+    this.options.extractChannel = channel;
+  } else {
+    throw new Error(&#x27;Cannot extract invalid channel &#x27; + channel);
+  }
+  return this;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.integer" id="apidoc.element.sharp.is.integer">
+        function <span class="apidocSignatureSpan">sharp.is.</span>integer
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">integer = function (val) {
+  return number(val) &#x26;&#x26; val % 1 === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (channel === &#x27;red&#x27;) {
+    channel = 0;
+  } else if (channel === &#x27;green&#x27;) {
+    channel = 1;
+  } else if (channel === &#x27;blue&#x27;) {
+    channel = 2;
+  }
+  if (is.<span class="apidocCodeKeywordSpan">integer</span>(channel) &#x26;&#x26; is.inRange(channel, 0, 4)) {
+    this.options.extractChannel = channel;
+  } else {
+    throw new Error(&#x27;Cannot extract invalid channel &#x27; + channel);
+  }
+  return this;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.invalidParameterError" id="apidoc.element.sharp.is.invalidParameterError">
+        function <span class="apidocSignatureSpan">sharp.is.</span>invalidParameterError
+        <span class="apidocSignatureSpan">(name, expected, actual)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">invalidParameterError = function (name, expected, actual) {
+  return new Error(
+    `Expected ${expected} for ${name} but received ${actual} of type ${typeof actual}`
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @throws {Error} Invalid parameters
+ */
+function resize (width, height, options) {
+if (is.defined(width)) {
+  if (is.integer(width) &#x26;&#x26; is.inRange(width, 1, this.constructor.maximum.width)) {
+    this.options.width = width;
+  } else {
+    throw is.<span class="apidocCodeKeywordSpan">invalidParameterError</span>(&#x27;width&#x27;, `integer between 1 and ${this.constructor
+.maximum.width}`, width);
+  }
+} else {
+  this.options.width = -1;
+}
+if (is.defined(height)) {
+  if (is.integer(height) &#x26;&#x26; is.inRange(height, 1, this.constructor.maximum.height)) {
+    this.options.height = height;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.number" id="apidoc.element.sharp.is.number">
+        function <span class="apidocSignatureSpan">sharp.is.</span>number
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">number = function (val) {
+  return typeof val === &#x27;number&#x27; &#x26;&#x26; !Number.isNaN(val);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function sharpen (sigma, flat, jagged) {
+if (!is.defined(sigma)) {
+  // No arguments: default to mild sharpen
+  this.options.sharpenSigma = -1;
+} else if (is.bool(sigma)) {
+  // Boolean argument: apply mild sharpen?
+  this.options.sharpenSigma = sigma ? -1 : 0;
+} else if (is.<span class="apidocCodeKeywordSpan">number</span>(sigma) &#x26;&#x26; is.inRange(sigma, 0.01, 10000)) {
+  // Numeric argument: specific sigma
+  this.options.sharpenSigma = sigma;
+  // Control over flat areas
+  if (is.defined(flat)) {
+    if (is.number(flat) &#x26;&#x26; is.inRange(flat, 0, 10000)) {
+      this.options.sharpenFlat = flat;
+    } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.object" id="apidoc.element.sharp.is.object">
+        function <span class="apidocSignatureSpan">sharp.is.</span>object
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">object = function (val) {
+  return typeof val === &#x27;object&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @returns {Sharp}
+ * @throws {Error} Invalid parameters
+ */
+function overlayWith (overlay, options) {
+this.options.overlay = this._createInputDescriptor(overlay, options, {
+  allowStream: false
+});
+if (is.<span class="apidocCodeKeywordSpan">object</span>(options)) {
+  if (is.defined(options.tile)) {
+    if (is.bool(options.tile)) {
+      this.options.overlayTile = options.tile;
+    } else {
+      throw new Error(&#x27;Invalid overlay tile &#x27; + options.tile);
+    }
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.is.string" id="apidoc.element.sharp.is.string">
+        function <span class="apidocSignatureSpan">sharp.is.</span>string
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">string = function (val) {
+  return typeof val === &#x27;string&#x27; &#x26;&#x26; val.length &#x3e; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *   });
+ *
+ * @param {String} boolOp - one of `and`, `or` or `eor` to perform that bitwise operation, like the C logic operators `&#x26;`, `|`
+and `^` respectively.
+ * @returns {Sharp}
+ * @throws {Error} Invalid parameters
+ */
+function bandbool (boolOp) {
+  if (is.<span class="apidocCodeKeywordSpan">string</span>(boolOp) &#x26;&#x26; is.inArray(boolOp, [&#x27;and&#x27;, &#x27;or&#x27
+;, &#x27;eor&#x27;])) {
+    this.options.bandBoolOp = boolOp;
+  } else {
+    throw new Error(&#x27;Invalid bandbool operation &#x27; + boolOp);
+  }
+  return this;
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
