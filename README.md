@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/sharp.png?downloads=true)](https://www.npmjs.com/package/sharp)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-sharp/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-sharp%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-sharp/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-sharp/build/screenCapture.buildNpmdoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-sharp%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-sharp/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-sharp/build/screenCapture.npmPackageListing.svg)
 
