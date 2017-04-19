@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.sharp.sharp">
+            function <span class="apidocSignatureSpan"></span>sharp
+            <span class="apidocSignatureSpan">(input, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.sharp.cache">
             function <span class="apidocSignatureSpan">sharp.</span>cache
             <span class="apidocSignatureSpan">(options)</span>
@@ -315,6 +324,113 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sharp" id="apidoc.module.sharp">module sharp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sharp.sharp" id="apidoc.element.sharp.sharp">
+        function <span class="apidocSignatureSpan"></span>sharp
+        <span class="apidocSignatureSpan">(input, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sharp = function (input, options) {
+  if (!(this instanceof Sharp)) {
+    return new Sharp(input, options);
+  }
+  stream.Duplex.call(this);
+  this.options = {
+    // input options
+    sequentialRead: false,
+    limitInputPixels: maximum.pixels,
+    // ICC profiles
+    iccProfilePath: path.join(__dirname, &#x27;icc&#x27;) + path.sep,
+    // resize options
+    topOffsetPre: -1,
+    leftOffsetPre: -1,
+    widthPre: -1,
+    heightPre: -1,
+    topOffsetPost: -1,
+    leftOffsetPost: -1,
+    widthPost: -1,
+    heightPost: -1,
+    width: -1,
+    height: -1,
+    canvas: &#x27;crop&#x27;,
+    crop: 0,
+    angle: 0,
+    rotateBeforePreExtract: false,
+    flip: false,
+    flop: false,
+    extendTop: 0,
+    extendBottom: 0,
+    extendLeft: 0,
+    extendRight: 0,
+    withoutEnlargement: false,
+    kernel: &#x27;lanczos3&#x27;,
+    interpolator: &#x27;bicubic&#x27;,
+    centreSampling: false,
+    // operations
+    background: [0, 0, 0, 255],
+    flatten: false,
+    negate: false,
+    blurSigma: 0,
+    sharpenSigma: 0,
+    sharpenFlat: 1,
+    sharpenJagged: 2,
+    threshold: 0,
+    thresholdGrayscale: true,
+    trimTolerance: 0,
+    gamma: 0,
+    greyscale: false,
+    normalise: 0,
+    booleanBufferIn: null,
+    booleanFileIn: &#x27;&#x27;,
+    joinChannelIn: [],
+    extractChannel: -1,
+    colourspace: &#x27;srgb&#x27;,
+    // overlay
+    overlayGravity: 0,
+    overlayXOffset: -1,
+    overlayYOffset: -1,
+    overlayTile: false,
+    overlayCutout: false,
+    // output
+    fileOut: &#x27;&#x27;,
+    formatOut: &#x27;input&#x27;,
+    streamOut: false,
+    withMetadata: false,
+    withMetadataOrientation: -1,
+    resolveWithObject: false,
+    // output format
+    jpegQuality: 80,
+    jpegProgressive: false,
+    jpegChromaSubsampling: &#x27;4:2:0&#x27;,
+    jpegTrellisQuantisation: false,
+    jpegOvershootDeringing: false,
+    jpegOptimiseScans: false,
+    pngProgressive: false,
+    pngCompressionLevel: 6,
+    pngAdaptiveFiltering: true,
+    webpQuality: 80,
+    webpAlphaQuality: 100,
+    webpLossless: false,
+    webpNearLossless: false,
+    tiffQuality: 80,
+    tiffCompression: &#x27;jpeg&#x27;,
+    tiffPredictor: &#x27;none&#x27;,
+    tileSize: 256,
+    tileOverlap: 0,
+    // Function to notify of queue length changes
+    queueListener: function (queueLength) {
+      queue.emit(&#x27;change&#x27;, queueLength);
+    }
+  };
+  this.options.input = this._createInputDescriptor(input, options, { allowStream: true });
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
